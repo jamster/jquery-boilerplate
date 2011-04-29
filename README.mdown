@@ -1,3 +1,23 @@
 # jQuery Boilerplate Plugin Code
 This is a simple shell of a jQuery plugin to help plugin authors get started.  It's a straight copy from Stephan Gabos' post [here](http://stefangabos.ro/jquery/jquery-plugin-boilerplate/)
 
+## Added ability to add state to the plugin
+
+``` javascript
+
+	var $this = $(this),
+		data = $this.data('transactions');
+
+	// Initialize
+	if ( ! data ) {
+
+		$(this).data('transactions', {
+			target : $this,
+			refund_amount : 0,
+			transaction_count : 0,
+			refund_amount_span : $this.find('span.refund_amount'),
+			transaction_count_span : $this.find('span.transaction_count')
+		})
+	}	
+			
+```

@@ -40,6 +40,25 @@
 
                 // iterate through all the DOM elements we are attaching the plugin to
                 return this.each(function() {
+	
+					// Set up some data variables for each element
+					var $this = $(this),
+						data = $this.data('boilerplate'); // Name your data whatever you like
+
+					// Initialize
+					if ( ! data ) {
+						// Set the data to whatever you want to start with
+						$(this).data('boilerplate', {
+							target : $this,
+							var1 : 0,
+							var2 : 'happy',
+							display_span : $this.find('span.display')
+						})
+					}	
+
+					// you can access the data like this:
+					// console.log($(this).data('boilerplate')['var1]) # => 0
+	
 
                     // "element" holds the jQuery version of the current DOM element
                     // "this" refers to the actual DOM element
