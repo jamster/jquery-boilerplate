@@ -1,0 +1,3 @@
+# jQuery Boilerplate Plugin Code
+This is a simple shell of a jQuery plugin to help plugin authors get started.  It's a straight copy from Stephan Gabos' post [here](http://stefangabos.ro/jquery/jquery-plugin-boilerplate/)
+
